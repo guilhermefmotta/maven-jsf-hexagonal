@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Teste</title>
+
+    <script>
+		function jsTeste() {
+			console.log('moving for another page');
+		}
+    </script>
+</h:head>
+
+<h:body>
+    <p:panel header="#{msg.ola}">
+        <h:form>
+            <h:outputLabel value="Digite seu nome: "/>
+            <h:inputText value="#{accountBean.nome}"/>
+
+            <h:commandButton action="bemvindo" type="submit" value="Enviar"/>
+            <h:commandButton action="template/teste" onclick="jsTeste();" value="Javascript"/>
+        </h:form>
+    </p:panel>
+    <h:form>
+        <p:growl id="message" showDetail="true"/>
+
+        <p:commandButton value="Destroy the World" action="#{accountBean.call}"  update="message">
+            <p:confirm header="Confirmation" message="Are you sure?" icon="pi pi-exclamation-triangle"/>
+        </p:commandButton>
+
+        <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+            <p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+            <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times"/>
+        </p:confirmDialog>
+    </h:form>
+    <p:messages/>
+
+</h:body>
+</html>
