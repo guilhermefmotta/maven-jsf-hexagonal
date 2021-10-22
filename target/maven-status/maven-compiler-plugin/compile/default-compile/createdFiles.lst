@@ -1,10 +1,10 @@
 adapters/dto/AccountDto.class
-adapters/outbound/persistence/account/Demo.class
 adapters/outbound/persistence/account/Account.class
 adapters/inbound/presentation/bean/AccountBean.class
 application/ports/LoadAccountRepository.class
 application/services/LoadAccountImplRepository.class
 adapters/outbound/persistence/account/PgLoadAccountRepository.class
 application/services/AddAccountImplRepository.class
+adapters/configuration/EntityManagerFactoryProvider.class
 application/domain/account/Account.class
 application/ports/AddAccountRepository.class
