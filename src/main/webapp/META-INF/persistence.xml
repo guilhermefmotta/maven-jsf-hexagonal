@@ -6,6 +6,7 @@
     <!-- if we want more datasource we need create another persistence-unit -->
         <persistence-unit name="persistencePostgres" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/boirleplate"/>
